@@ -6,11 +6,11 @@
 
       <div class="text-2xl mb-4">
         <span class="font-bold">New:</span>
-        {{ numberWithCommas(stats.NewConfirmed) }}
+        {{ stats.NewConfirmed }}
       </div>
       <div class="text-2xl mb-4">
         <span class="font-bold">Total:</span>
-        {{numberWithCommas(stats.TotalConfirmed )}}
+        {{stats.TotalConfirmed }}
       </div>
     </div>
 
@@ -20,11 +20,11 @@
 
       <div class="text-2xl mb-4">
         <span class="font-bold">New:</span>
-        {{ numberWithCommas(stats.NewDeaths) }}
+        {{ stats.NewDeaths }}
       </div>
       <div class="text-2xl mb-4">
         <span class="font-bold">Total:</span>
-        {{numberWithCommas(stats.TotalDeaths) }}
+        {{stats.TotalDeaths }}
       </div>
     </div>
   </div>
@@ -34,12 +34,7 @@
 export default {
     name: 'DataBoxes',
     props: ['stats'],
-    methods: {
-        numberWithCommas(x) {
-            return x.toString()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        }
-    }
+   
 }
 </script>
 
